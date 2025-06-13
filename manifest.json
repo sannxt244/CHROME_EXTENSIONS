@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Amis task",
+  "version": "1.0",
+  "description": "Extension to modify HTML properties",
+  "content_scripts": [
+      {
+          "matches": ["https://misajsc.amis.vn/task/*", "https://misajsc.amis.vn/chat/*"],
+          "js": ["content.js"]
+      }
+  ],
+  "action": {
+    "default_json": {}
+  },
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
